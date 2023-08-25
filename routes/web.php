@@ -81,6 +81,6 @@ Route::post('/register',[RegisterController::class,'processRegister'])->name('pr
 
 //todo
 Route::get('/', function(){
- return "00110";
+ return "11111";
 });
 
