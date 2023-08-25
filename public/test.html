@@ -1,0 +1,136 @@
+<html>
+<head>
+
+</head>
+
+<body>
+
+
+
+
+
+<script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+
+
+<script>
+    $(document).ready(function(){
+
+
+
+        function auth(){
+            $.post( "http://159.223.111.63/oauth/token", {
+                "username": "jedy@gmail.com",
+                "password": "6q00t5at5",
+                "grant_type": "password",
+                "client_id": "956b1f77-89aa-4902-ad4f-0d67bbffc4bf"
+            })
+                .done(function() {
+                    alert( "second success" );
+                })
+                .fail(function(error) {
+                    console.log(error)
+                    alert( "error" );
+                })
+        }
+
+        function register( ){
+            $.ajax({
+                url: "http://159.223.111.63/api/register",
+                type:"POST",
+                dataType: 'json',
+                data: {
+                    "email": "mr.fsfs@gmail.com",
+                    "name": "string",
+                    "password": "string",
+                    "password_confirmation": "string",
+                    "gender": "male",
+                    "date_of_birth": "1994-01-22",
+                    "phone_number": 0,
+                    "personal": "personal",
+                    "client_type": "client",
+                    headers: {
+                        'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NTZiMWY3Ny04OWFhLTQ5MDItYWQ0Zi0wZDY3YmJmZmM0YmYiLCJqdGkiOiI3N2MyMzgxZDgwYjZiNjYxYzI4MGIyN2M1ZDA3YjcxNTU5MjIyZDBkMjM2YzA2YzZjYzY2ZWNkMDdhMzEyNWEwZjc2MWIyODM0ZWE0NDljZiIsImlhdCI6MTY0MzY2MzA3My42NTk3MzMsIm5iZiI6MTY0MzY2MzA3My42NTk3MzUsImV4cCI6MTY0NDk1OTA3My42NTMxMTYsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.FU8CIEqW52F1-cTSBA9V_WIi7jRJXitUQyEUBhl_tIaz6_dXgJshOw0uLg3bRGH8MK2jY1cEEy-2CVgnTrotEDEKGeQY8szeBqr8QOxfuDch6ZjaJ05MKO_PlWeqeOYG2aUog7L31XpL3k3VumPTPhZoywZk2GULcjkTODLz3dew6ciYqSOnxIYJntkY6lMeZetLPKPul87GuIGykMNcTjbdkKQCQ7TmvnmMjD-FdNULBMBtwzjvku71k-8BIyH9fx0hSyg-ZiCKqkLr-JNK9ZxnQizBpUluavqUrq0NWZ_rN-im80phxxssiVLCEsZ7iv-neyCFdHonmkX3bDfTu1Q1d5pVJXJQOo2GfdEMZlMr4W88kb-MbJ_5t29HxKXc2Ck62YsH1SeINMpRHU5PlhMjTnk-iPy_5gxTh_E1LuE3OD9EUh8r2eIAudGYTXN5bOJmBWjR6qAHYpts55i36x7Sdova9MCPCPTlRWMNHVd8tMnNwsRrPFVtIJpQ1XAMP5waa9ejqS4HpzOvzH6Qlx8B2lchzN5nUwf1Uvzp8LW-3g9CH9IRDq-j0nfp2WaeYKc_DChbCgCJwW18sIxWRbI3rlk9zxqaT-Y8E-qaM29gLthbtrI1EqgEk3aTlmau4fag2lCBOoJm5pC5xmN2Z0jMzQFr3mhID6LWALcAfj0'
+                    },
+                    contentType: 'application/json; charset=utf-8',
+                }
+            })
+                .done(function() {
+                    alert( "second success" );
+                })
+                .fail(function() {
+                    alert( "error" );
+                })
+        }
+
+        function posts(){
+            $.get( "http://159.223.111.63/api/posts/list", {
+                "locale": "en",
+                "page": 1,
+                "perPage": 20,
+                "categories": [22,1]
+            })
+                .done(function() {
+                    alert( "second success" );
+                })
+                .fail(function(error) {
+                    console.log(error)
+                    alert( "error" );
+                })
+        }
+
+        function singlePost(){
+            $.get( "http://159.223.111.63/api/posts/1/ru", { })
+                .done(function(response) {
+                   console.log(response)
+                })
+                .fail(function(error) {
+                    console.log(error)
+                    alert( "error" );
+                })
+        }
+
+
+        function uploadImage(file){
+            var form = new FormData();
+            form.append("service_id", "20");
+            form.append("file", file, "/C:/Users/mrniz/OneDrive/Pictures/maxresdefault.jpg");
+            form.append("is_main", "false");
+
+            var settings = {
+                "url": "https://api.serwish.ge/api/services/add-images",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NTZiMWY3Ny04OWFhLTQ5MDItYWQ0Zi0wZDY3YmJmZmM0YmYiLCJqdGkiOiJmM2E0NGExMmU3MjY2MDdmYzc5MTBlZDFjZDA0YWI5MmJkYmJmNTY5OGExYjA2ZDllM2VkMjVhMmI2MmFjZTkxOGZhYWU4ZTU5NGQzMGQxZSIsImlhdCI6MTY0NDAyMTEzOS4wMzYwNzQsIm5iZiI6MTY0NDAyMTEzOS4wMzYwNzcsImV4cCI6MTY0NTMxNzEzOS4wMzA4NzEsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.t5S5vV2ukCHQVKb3eG6ZphnT28GLsHvK2AiIR9z7iqg4dnBDmframCXt6pYlP_juL9x2kXG80YF1rfqCIH4eebPLsyynYIcOkskWcdX6oZtfvemvHMUi99Zr49IttN92U_MV8tjyESOiK1n54DNc10J8mz9VX29sVbZtl18do_XwKcp9xiER5efrsoZRMS3z_Z1aYU752TN109zzYXAzAJW4Frb0OUhWL7fTJUrFgFbuirkE_pMnFZcNWnFgYg2CRRLQ0pY1zFyaUNrZdMF1kkXT69il6kxWdN80RI3btB3LlnvcB_teifJOect7wyOdrhj_ekyIBXKyjUOpHtpnPg26w1-9_6trt3eVul-ju99wRhoTsyzbg6ptBVY0giNXoEA18DX17-W5lhHQUGkcEB4YL7i9UM9Zdsui_tK2Aw1DNMwSnq1Vg1fZHp9WvKVjNhgugJg0Tx3_zhnrvSl9RF-6pawN7xN5X-FTCqENBQJtv8gAptzAfaANQ6d3f3xINWwUudw3gCCDa5rw_TGDBbT1gbGE4IyG6Kg0xm_M6CXyBHnEpP04WXNB75ZbUvntxX6ldHA2SnW5AT_KfzHYiVjGKRcMW7pu2tA16cSu5wyMfAYFTDSLt8BilIUIjGyGQWnThSbbBkyTwqeDS6yo49I_Y2DtfQQr7WjWtmoILT0",
+                    "Accept": "application/json"
+                },
+                "processData": false,
+                "mimeType": "multipart/form-data",
+                "contentType": false,
+                "data": form
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+            });
+        }
+        // auth()
+        // posts()
+        // singlePost()
+        $('.submit').click(() => {
+            let file = $('.file')[0].files[0];
+            uploadImage(file)
+
+        })
+    })
+</script>
+
+<input type="file" name="file" class="file"/>
+<button type="submit" class="submit"></button>
+
+
+</body>
+</html>

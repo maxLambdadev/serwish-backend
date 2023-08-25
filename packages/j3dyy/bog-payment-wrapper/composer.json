@@ -1,0 +1,25 @@
+{
+    "name": "j3dyy/bog-payment-wrapper",
+    "description": "Bank of georgia(bog) payment system ",
+    "autoload": {
+        "psr-4": {
+            "J3dyy\\BogPaymentWrapper\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "j3dyy",
+            "email": "mr.nizharadze@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "J3dyy\\BogPaymentWrapper\\BogPaymentWrapperServiceProvider"
+            ]
+        }
+    }
+}

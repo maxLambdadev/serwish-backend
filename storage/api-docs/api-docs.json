@@ -1,0 +1,3397 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Serwish Api",
+        "description": "Serwish description",
+        "contact": {
+            "email": "dev@serwish.ge"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://serwish.ge",
+            "description": "serwish web-site"
+        },
+        {
+            "url": "https://api.serwish.ge/api",
+            "description": "serwish api"
+        }
+    ],
+    "paths": {
+        "/oauth/token": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "authorize user",
+                "operationId": "f16771682c0ce17aadfbb95e8d69aae5",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ApiAuthRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "token response",
+                                        "value": {
+                                            "token_type": "Bearer",
+                                            "expires_in": 1296000,
+                                            "access_token": "",
+                                            "refresh_token": ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/auth/login": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "authorize user v2",
+                "operationId": "5ca13e3a1c8149b2f0a606b4ade3c9af",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ApiLoginRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "token response",
+                                        "value": {
+                                            "token_type": "Bearer",
+                                            "expires_in": 1296000,
+                                            "access_token": "",
+                                            "refresh_token": ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/register": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "register user",
+                "operationId": "8e4e3cb7b46126f4696379d3c7eeb4ad",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RegisterRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "errors": "arrayOf(errorKey:errorValue)"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/send-sms": {
+            "post": {
+                "tags": [
+                    "3rd"
+                ],
+                "summary": "register user",
+                "operationId": "f9d2d9a7459135d568abef2af2a92224",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SendSmsRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "code": 200,
+                                            "body": {
+                                                "code": 1234
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "errors": "arrayOf(errorKey:errorValue)"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/check-sms": {
+            "post": {
+                "tags": [
+                    "3rd"
+                ],
+                "summary": "checking sms code",
+                "operationId": "4e3768308aadf89e82b587c616a49967",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CheckSmsRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "code": 200
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "errors": "arrayOf(errorKey:errorValue)"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/change-sms": {
+            "post": {
+                "tags": [
+                    "3rd"
+                ],
+                "summary": "change user password code",
+                "operationId": "99a62e043e67facab4359b5e17812758",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ChangePasswordRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "code": 200
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "errors": "arrayOf(errorKey:errorValue)"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/categories/list": {
+            "get": {
+                "tags": [
+                    "Category"
+                ],
+                "summary": "Get categories by type",
+                "operationId": "getFilteredCategories",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/FilterableSupportRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Category"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/make/call": {
+            "post": {
+                "tags": [
+                    "Common"
+                ],
+                "summary": "make call request",
+                "operationId": "0b272340c5f22c1e7f60b0e0dc9bdd25",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MakeCallRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "success": "empty"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/make/contact": {
+            "post": {
+                "tags": [
+                    "Common"
+                ],
+                "summary": "make contact request",
+                "operationId": "e68cfb7f6dc658d5538c02b2db5e0173",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Faq"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "success": "empty"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/faq": {
+            "get": {
+                "tags": [
+                    "Common"
+                ],
+                "summary": "Get faq list",
+                "operationId": "getFaqList",
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Category"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/slider": {
+            "get": {
+                "tags": [
+                    "Common"
+                ],
+                "summary": "Get slider list",
+                "operationId": "getSliderList",
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Slider"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/ads": {
+            "get": {
+                "tags": [
+                    "Common"
+                ],
+                "summary": "Get ads list",
+                "operationId": "getAdsList",
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Ads"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/orders/start-order": {
+            "post": {
+                "tags": [
+                    "Orders"
+                ],
+                "summary": "start first order ",
+                "operationId": "postStartORder",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/StartOrderRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Services"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/orders/get-orders/list": {
+            "get": {
+                "tags": [
+                    "Orders"
+                ],
+                "summary": "Get orders ",
+                "operationId": "getOrdersByUser",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/GetOrdersRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Services"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/orders/get-order/{id}": {
+            "get": {
+                "tags": [
+                    "Orders"
+                ],
+                "summary": "Get orders ",
+                "operationId": "getSingleOrderById",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/GetOrdersRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Services"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/orders/create-payment": {
+            "post": {
+                "tags": [
+                    "Orders"
+                ],
+                "summary": "create payment for group ",
+                "operationId": "createPaymentRequest",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/CreatePaymentRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Services"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/orders/get-payments/list": {
+            "get": {
+                "tags": [
+                    "Orders"
+                ],
+                "summary": "Get payment list ",
+                "operationId": "getPayments",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/GetGroupPaymentsRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Services"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/orders/order/unread-messages": {
+            "get": {
+                "tags": [
+                    "Orders"
+                ],
+                "summary": "Get unread message list ",
+                "operationId": "getUnreadMessages",
+                "responses": {
+                    "201": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/api/services/orders/my-payment/my-withdrawals": {
+            "get": {
+                "tags": [
+                    "Orders"
+                ],
+                "summary": "Get unread message list ",
+                "operationId": "userWithdrawals",
+                "responses": {
+                    "201": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/api/services/orders/request-withdraw": {
+            "post": {
+                "tags": [
+                    "Orders"
+                ],
+                "summary": "create payment for group ",
+                "operationId": "requestWithdrawal",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/CreateWithdrawalRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/UserWithdrawalRequests"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/orders/order/message/attachment": {
+            "post": {
+                "tags": [
+                    "Orders"
+                ],
+                "summary": "create orders for group ",
+                "operationId": "uploadMessageAttachment",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/MediaStoreRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/OrderGroupMessage"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/posts/list": {
+            "get": {
+                "tags": [
+                    "Post"
+                ],
+                "summary": "Get posts ",
+                "operationId": "getFilteredPosts",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/PostListRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Post"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/posts/{id}/{locale}": {
+            "get": {
+                "tags": [
+                    "Post"
+                ],
+                "summary": "Get posts ",
+                "operationId": "getSinglePost",
+                "responses": {
+                    "404": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Post"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/list": {
+            "get": {
+                "tags": [
+                    "Services"
+                ],
+                "summary": "Get services ",
+                "operationId": "getFilteredService",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/ServicesListRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Services"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/{id}/{locale}": {
+            "get": {
+                "tags": [
+                    "Services"
+                ],
+                "summary": "Get single service ",
+                "operationId": "getSingleService",
+                "responses": {
+                    "404": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Services"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/call/review": {
+            "get": {
+                "tags": [
+                    "Services"
+                ],
+                "summary": "call review ",
+                "operationId": "saveReviewForService",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/ServiceCallReviewRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/call/specialist/review": {
+            "get": {
+                "tags": [
+                    "Services"
+                ],
+                "summary": "call specialist review ",
+                "operationId": "phoneSpecialistCallback",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/SpecialistReview"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/create-basic": {
+            "post": {
+                "tags": [
+                    "Services"
+                ],
+                "summary": "creating service",
+                "operationId": "65a49961718e11ac4727243392116a9a",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateServiceRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "errors": "arrayOf(errorKey:errorValue)"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/update-basic": {
+            "post": {
+                "tags": [
+                    "Services"
+                ],
+                "summary": "update service",
+                "operationId": "4cac1c207041a807336a0cd9890238cf",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateServiceRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "errors": "arrayOf(errorKey:errorValue)"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/add-images": {
+            "post": {
+                "tags": [
+                    "Services"
+                ],
+                "summary": "attach images ",
+                "operationId": "8786d3c88d74a9d39adbad0e008ee175",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MediaStoreRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "errors": "arrayOf(errorKey:errorValue)"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/remove-images": {
+            "post": {
+                "tags": [
+                    "Services"
+                ],
+                "summary": "remove images ",
+                "operationId": "0603eaf28d4575b697efd464dab4bcba",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MediaRemoveRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "errors": "arrayOf(errorKey:errorValue)"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/tags/sync": {
+            "post": {
+                "tags": [
+                    "Services"
+                ],
+                "summary": "sync tags to services",
+                "operationId": "6f8adb54ea132e211ca67d0e3937403a",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AddTagRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "errors": "arrayOf(errorKey:errorValue)"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/tags/search": {
+            "get": {
+                "tags": [
+                    "Services"
+                ],
+                "summary": "Search tag by its name",
+                "operationId": "getFilteredTags",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/NameSearchRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Tags"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/city/sync": {
+            "post": {
+                "tags": [
+                    "Services"
+                ],
+                "summary": "sync cities to services",
+                "operationId": "c3c03ea14cee049e302a8fce374cc1a7",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AddCityRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "errors": "arrayOf(errorKey:errorValue)"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/city/search": {
+            "get": {
+                "tags": [
+                    "Services"
+                ],
+                "summary": "Search city by its name",
+                "operationId": "getFilteredCity",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/NameSearchRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/City"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/services/city/list": {
+            "get": {
+                "tags": [
+                    "Services"
+                ],
+                "summary": "Get cities ",
+                "operationId": "getCities",
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/City"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/search": {
+            "post": {
+                "tags": [
+                    "3rd"
+                ],
+                "summary": "search into platform",
+                "operationId": "7edf8ac6626d68006afe9925b5e386f6",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SearchRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "where": "array"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "errors": "arrayOf(errorKey:errorValue)"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user/me": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Get User ",
+                "operationId": "getUserInformation",
+                "responses": {
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/User"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user/update": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Update user",
+                "operationId": "updateUserInformation",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/UpdateUserRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/User"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user/add-profile-pic": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "attach profile picture ",
+                "operationId": "a4ca1f13034a1c4bcfa520c8e1f83820",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MediaStoreRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "errors": "arrayOf(errorKey:errorValue)"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/specialists/add-review": {
+            "post": {
+                "tags": [
+                    "Specialists"
+                ],
+                "summary": "attach profile picture ",
+                "operationId": "85281c98df3a0c65ab03bdc620947965",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AddReviewRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "success": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {},
+                                "examples": {
+                                    "result": {
+                                        "summary": "some",
+                                        "value": {
+                                            "errors": "arrayOf(errorKey:errorValue)"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user/services": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Get user based services ",
+                "operationId": "getUserServices",
+                "responses": {
+                    "404": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Services"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/specialist/list": {
+            "get": {
+                "tags": [
+                    "Specialists"
+                ],
+                "summary": "Get specialists ",
+                "operationId": "getFilteredService",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/SpecialistListRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/User"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/specialist/{spec_id}": {
+            "get": {
+                "tags": [
+                    "Specialists"
+                ],
+                "summary": "Get specialist  by id ",
+                "operationId": "getSpecialistById",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/GetSpecialistRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/User"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/specialist/{spec_id}/services": {
+            "get": {
+                "tags": [
+                    "Specialists"
+                ],
+                "summary": "Get specialist services by id ",
+                "operationId": "getServicesBySpecialist",
+                "parameters": [
+                    {
+                        "name": "filterable",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/SpecialistServicesListRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Services"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/specialists/{id}/reviews": {
+            "get": {
+                "tags": [
+                    "Specialists"
+                ],
+                "summary": "Get user based services ",
+                "operationId": "getUserServices",
+                "responses": {
+                    "404": {
+                        "description": "fail",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiRequestException"
+                                }
+                            }
+                        }
+                    },
+                    "201": {
+                        "description": "success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/SpecialistCommentReview"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ApiNotFoundException": {
+                "properties": {
+                    "message": {
+                        "description": "The err message",
+                        "type": "string",
+                        "example": "Not Found"
+                    }
+                },
+                "type": "object"
+            },
+            "ApiRequestException": {
+                "properties": {
+                    "message": {
+                        "description": "The err message",
+                        "type": "string",
+                        "example": "Not Found"
+                    }
+                },
+                "type": "object"
+            },
+            "AddCityRequest": {
+                "properties": {
+                    "cities": {
+                        "description": "city ids",
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "type": "string",
+                                    "default": "city ids",
+                                    "property": "cities"
+                                }
+                            ]
+                        }
+                    },
+                    "locale": {
+                        "description": "locale",
+                        "type": "locale"
+                    }
+                },
+                "type": "object"
+            },
+            "AddReviewRequest": {
+                "properties": {
+                    "description": {
+                        "description": "description",
+                        "type": "string"
+                    },
+                    "likes": {
+                        "description": "likes",
+                        "type": "string"
+                    },
+                    "service_id": {
+                        "description": "service_id",
+                        "type": "int"
+                    }
+                },
+                "type": "object"
+            },
+            "AddTagRequest": {
+                "properties": {
+                    "tags": {
+                        "description": "tag names",
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "type": "string",
+                                    "default": "some name",
+                                    "property": "tags"
+                                }
+                            ]
+                        }
+                    },
+                    "locale": {
+                        "description": "locale",
+                        "type": "locale"
+                    }
+                },
+                "type": "object"
+            },
+            "ApiAuthRequest": {
+                "required": [
+                    "username",
+                    "password",
+                    "grant_type",
+                    "client_id"
+                ],
+                "properties": {
+                    "username": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "grant_type": {
+                        "type": "string",
+                        "default": "password"
+                    },
+                    "client_id": {
+                        "type": "string",
+                        "default": "956b1f77-89aa-4902-ad4f-0d67bbffc4bf"
+                    }
+                },
+                "type": "object"
+            },
+            "ApiLoginRequest": {
+                "properties": {
+                    "phone_number": {
+                        "description": "username",
+                        "format": "string"
+                    },
+                    "password": {
+                        "description": "password",
+                        "format": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "ChangePasswordRequest": {
+                "properties": {
+                    "password": {
+                        "type": "string"
+                    },
+                    "password_confirmation": {
+                        "type": "string"
+                    },
+                    "sms_validation": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "CheckSmsRequest": {
+                "properties": {
+                    "sms_validation": {
+                        "type": "number"
+                    },
+                    "phone_number": {
+                        "type": "number"
+                    }
+                },
+                "type": "object"
+            },
+            "CreatePaymentRequest": {
+                "properties": {
+                    "amount": {
+                        "description": "30.15",
+                        "format": "string",
+                        "default": "10.20"
+                    },
+                    "group_id": {
+                        "description": "",
+                        "format": "integer",
+                        "default": "10"
+                    }
+                },
+                "type": "object"
+            },
+            "CreateServiceRequest": {
+                "properties": {
+                    "price": {
+                        "type": "number",
+                        "format": "double",
+                        "default": "0.0"
+                    },
+                    "contact_number": {
+                        "type": "string"
+                    },
+                    "has_online_payment": {
+                        "type": "boolean"
+                    },
+                    "is_active": {
+                        "type": "boolean"
+                    },
+                    "location": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "locale": {
+                        "type": "string"
+                    },
+                    "categories": {
+                        "description": "categories you can specify multiple ids",
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "type": "integer",
+                                    "default": "22,33,etc",
+                                    "property": "categories"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "type": "object"
+            },
+            "CreateWithdrawalRequest": {
+                "properties": {
+                    "amount": {
+                        "description": "30.15",
+                        "format": "string",
+                        "default": "10.20"
+                    }
+                },
+                "type": "object"
+            },
+            "FilterableSupportRequest": {
+                "properties": {
+                    "locale": {
+                        "description": "locale",
+                        "format": "locale",
+                        "default": "ka"
+                    },
+                    "type": {
+                        "description": "type",
+                        "format": "string",
+                        "default": "POST"
+                    },
+                    "page": {
+                        "description": "page",
+                        "format": "integer",
+                        "default": 1
+                    },
+                    "perPage": {
+                        "description": "perPage",
+                        "format": "integer",
+                        "default": 20
+                    }
+                },
+                "type": "object"
+            },
+            "GetGroupPaymentsRequest": {
+                "properties": {
+                    "type": {
+                        "description": "started,half_payment_requested,half_payment_approved,payment_finished,order_closed",
+                        "format": "string",
+                        "default": "all"
+                    },
+                    "group_id": {
+                        "description": "",
+                        "format": "integer",
+                        "default": "10"
+                    },
+                    "perPage": {
+                        "description": "",
+                        "format": "integer",
+                        "default": "10"
+                    }
+                },
+                "type": "object"
+            },
+            "GetOrdersRequest": {
+                "properties": {
+                    "type": {
+                        "description": "started,half_payment_requested,half_payment_approved,payment_finished,order_closed",
+                        "format": "string",
+                        "default": "all"
+                    },
+                    "perPage": {
+                        "description": "",
+                        "format": "integer",
+                        "default": "10"
+                    }
+                },
+                "type": "object"
+            },
+            "GetSpecialistRequest": {
+                "properties": {
+                    "user_id": {
+                        "description": "user_id",
+                        "format": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "MakeCallRequest": {
+                "properties": {
+                    "phone_number": {
+                        "description": "phone_number",
+                        "format": "string"
+                    },
+                    "category_id": {
+                        "description": "category_id",
+                        "format": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "MakeContactRequest": {
+                "properties": {
+                    "phone": {
+                        "description": "phone",
+                        "format": "string"
+                    },
+                    "title": {
+                        "description": "title",
+                        "format": "string"
+                    },
+                    "description": {
+                        "description": "description",
+                        "format": "string"
+                    },
+                    "subject": {
+                        "description": "subject",
+                        "format": "string"
+                    },
+                    "email": {
+                        "description": "email",
+                        "format": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "NameSearchRequest": {
+                "properties": {
+                    "locale": {
+                        "description": "locale",
+                        "format": "locale",
+                        "default": "ka"
+                    },
+                    "name": {
+                        "description": "name",
+                        "format": "string",
+                        "default": "name"
+                    }
+                },
+                "type": "object"
+            },
+            "PostListRequest": {
+                "properties": {
+                    "locale": {
+                        "description": "locale",
+                        "format": "locale",
+                        "default": "ka"
+                    },
+                    "page": {
+                        "description": "page",
+                        "format": "integer",
+                        "default": 1
+                    },
+                    "perPage": {
+                        "description": "perPage",
+                        "format": "integer",
+                        "default": 20
+                    },
+                    "categories": {
+                        "description": "categories you can specify multiple ids",
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "type": "string",
+                                    "default": "22,33,etc",
+                                    "property": "categories"
+                                }
+                            ]
+                        }
+                    },
+                    "filterBy": {
+                        "description": "Get the validation rules that apply to the request.",
+                        "type": "enum",
+                        "enum": [
+                            "monthly",
+                            "weekly",
+                            "newest"
+                        ]
+                    }
+                },
+                "type": "object"
+            },
+            "RegisterRequest": {
+                "required": [
+                    "email",
+                    "gender",
+                    "password",
+                    "password_confirmation",
+                    "gender",
+                    "date_of_birth",
+                    "phone_number",
+                    "personal",
+                    "client_type"
+                ],
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "password_confirmation": {
+                        "type": "string"
+                    },
+                    "gender": {
+                        "type": "enum",
+                        "enum": [
+                            "male",
+                            "female",
+                            "other"
+                        ]
+                    },
+                    "date_of_birth": {
+                        "description": "Y-m-d",
+                        "type": "string",
+                        "format": "string"
+                    },
+                    "phone_number": {
+                        "type": "number"
+                    },
+                    "personal": {
+                        "type": "enum",
+                        "enum": [
+                            "personal",
+                            "business"
+                        ]
+                    },
+                    "client_type": {
+                        "type": "enum",
+                        "enum": [
+                            "client",
+                            "employee"
+                        ]
+                    },
+                    "sms_validation": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "SearchRequest": {
+                "properties": {
+                    "key": {
+                        "description": "key",
+                        "format": "string"
+                    },
+                    "where": {
+                        "description": "Get the validation rules that apply to the request.",
+                        "type": "enum",
+                        "enum": [
+                            "services",
+                            "categories",
+                            "specialist",
+                            "post_categories",
+                            "posts",
+                            "cities"
+                        ]
+                    }
+                },
+                "type": "object"
+            },
+            "SendSmsRequest": {
+                "properties": {
+                    "phone_number": {
+                        "type": "number"
+                    }
+                },
+                "type": "object"
+            },
+            "ServiceCallReviewRequest": {
+                "properties": {
+                    "value": {
+                        "description": "value",
+                        "format": "integer",
+                        "default": 1
+                    },
+                    "service_id": {
+                        "description": "service_id",
+                        "format": "integer",
+                        "default": 1
+                    }
+                },
+                "type": "object"
+            },
+            "ServicesListRequest": {
+                "properties": {
+                    "ids": {
+                        "description": "ids",
+                        "format": "array",
+                        "default": "ids"
+                    },
+                    "locale": {
+                        "description": "locale",
+                        "format": "string",
+                        "default": "ka"
+                    },
+                    "personal": {
+                        "description": "personal or business",
+                        "format": "string",
+                        "default": "personal"
+                    },
+                    "page": {
+                        "description": "page",
+                        "format": "integer",
+                        "default": 1
+                    },
+                    "perPage": {
+                        "description": "perPage",
+                        "format": "integer",
+                        "default": 20
+                    },
+                    "has_serwish_quality": {
+                        "description": "has_serwish_quality",
+                        "format": "boolean",
+                        "default": false
+                    },
+                    "cities": {
+                        "description": "cities you can specify multiple ids",
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "type": "string",
+                                    "default": "22,33,etc",
+                                    "property": "cities"
+                                }
+                            ]
+                        }
+                    },
+                    "categories": {
+                        "description": "categories you can specify multiple ids",
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "type": "string",
+                                    "default": "22,33,etc",
+                                    "property": "categories"
+                                }
+                            ]
+                        }
+                    },
+                    "specialists": {
+                        "description": "specialist ids",
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "type": "number",
+                                    "default": "22,33,etc",
+                                    "property": "specialists"
+                                }
+                            ]
+                        }
+                    },
+                    "filterBy": {
+                        "description": "Get the validation rules that apply to the request.",
+                        "type": "enum",
+                        "enum": [
+                            "all",
+                            "with_serwish_quality",
+                            "without_serwish_quality"
+                        ]
+                    }
+                },
+                "type": "object"
+            },
+            "SpecialistListRequest": {
+                "properties": {
+                    "page": {
+                        "description": "page",
+                        "format": "integer",
+                        "default": 1
+                    },
+                    "perPage": {
+                        "description": "perPage",
+                        "format": "integer",
+                        "default": 20
+                    },
+                    "has_serwish_quality": {
+                        "description": "has_serwish_quality",
+                        "format": "boolean",
+                        "default": false
+                    },
+                    "personal": {
+                        "description": "personal or business",
+                        "format": "string",
+                        "default": "personal"
+                    },
+                    "filterBy": {
+                        "description": "Get the validation rules that apply to the request.",
+                        "type": "enum",
+                        "enum": [
+                            "all",
+                            "with_serwish_quality",
+                            "without_serwish_quality"
+                        ]
+                    }
+                },
+                "type": "object"
+            },
+            "SpecialistServicesListRequest": {
+                "properties": {
+                    "locale": {
+                        "description": "locale",
+                        "format": "locale",
+                        "default": "ka"
+                    },
+                    "user_id": {
+                        "description": "user_id",
+                        "format": "integer"
+                    },
+                    "page": {
+                        "description": "page",
+                        "format": "integer",
+                        "default": 1
+                    },
+                    "perPage": {
+                        "description": "perPage",
+                        "format": "integer",
+                        "default": 20
+                    },
+                    "categories": {
+                        "description": "categories you can specify multiple ids",
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "type": "string",
+                                    "default": "22,33,etc",
+                                    "property": "categories"
+                                }
+                            ]
+                        }
+                    },
+                    "filterBy": {
+                        "description": "Get the validation rules that apply to the request.",
+                        "type": "enum",
+                        "enum": [
+                            "all",
+                            "with_serwish_quality",
+                            "without_serwish_quality"
+                        ]
+                    }
+                },
+                "type": "object"
+            },
+            "StartOrderRequest": {
+                "properties": {
+                    "service_id": {
+                        "description": "service_id",
+                        "format": "integer",
+                        "default": 1
+                    }
+                },
+                "type": "object"
+            },
+            "UpdateServiceRequest": {
+                "properties": {
+                    "id": {
+                        "description": "required",
+                        "type": "number",
+                        "format": "servuice_id"
+                    },
+                    "price": {
+                        "description": "optional",
+                        "type": "number",
+                        "format": "double",
+                        "default": "0.0"
+                    },
+                    "price_type": {
+                        "description": "price_type",
+                        "type": "string"
+                    },
+                    "contact_number": {
+                        "description": "optional",
+                        "type": "string"
+                    },
+                    "has_online_payment": {
+                        "description": "optional",
+                        "type": "boolean"
+                    },
+                    "is_active": {
+                        "description": "optional",
+                        "type": "boolean"
+                    },
+                    "location": {
+                        "description": "optional",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "optional",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "optional",
+                        "type": "string"
+                    },
+                    "locale": {
+                        "description": "optional",
+                        "type": "string"
+                    },
+                    "categories": {
+                        "description": "categories you can specify multiple ids optional",
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "type": "integer",
+                                    "default": "22,33,etc",
+                                    "property": "categories"
+                                }
+                            ]
+                        }
+                    },
+                    "workType": {
+                        "description": "optional",
+                        "type": "string"
+                    },
+                    "saturday": {
+                        "description": "saturday:{start_at,end_at:00:0}",
+                        "type": "string"
+                    },
+                    "sunday": {
+                        "description": "sunday:{start_at,end_at:00:0}",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "UpdateUserRequest": {
+                "required": [
+                    "email",
+                    "gender",
+                    "password",
+                    "password_confirmation",
+                    "gender",
+                    "date_of_birth",
+                    "phone_number",
+                    "personal",
+                    "client_type"
+                ],
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "password_confirmation": {
+                        "type": "string"
+                    },
+                    "gender": {
+                        "type": "enum",
+                        "enum": [
+                            "male",
+                            "female",
+                            "other"
+                        ]
+                    },
+                    "date_of_birth": {
+                        "description": "Y-m-d",
+                        "type": "string",
+                        "format": "string"
+                    },
+                    "phone_number": {
+                        "type": "number"
+                    },
+                    "personal": {
+                        "type": "enum",
+                        "enum": [
+                            "personal",
+                            "business"
+                        ]
+                    },
+                    "client_type": {
+                        "type": "enum",
+                        "enum": [
+                            "client",
+                            "employee"
+                        ]
+                    },
+                    "sms_validation": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "MediaRemoveRequest": {
+                "properties": {
+                    "media_id": {
+                        "type": "number"
+                    }
+                },
+                "type": "object"
+            },
+            "MediaStoreRequest": {
+                "properties": {
+                    "file": {
+                        "type": "string",
+                        "format": "binary"
+                    },
+                    "group_id": {
+                        "type": "number"
+                    },
+                    "is_main": {
+                        "type": "boolean",
+                        "default": false
+                    }
+                },
+                "type": "object"
+            },
+            "ApiAuthResponse": {
+                "title": "Api response",
+                "description": "Auth response",
+                "properties": {
+                    "token_type": {
+                        "title": "token_type",
+                        "description": "Token Type",
+                        "type": "string",
+                        "format": "string"
+                    },
+                    "access_token": {
+                        "title": "access_token",
+                        "description": "access_token",
+                        "type": "string"
+                    },
+                    "refresh_token": {
+                        "title": "refresh_token",
+                        "description": "refresh_token",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "ApiResponse": {
+                "title": "Api response",
+                "description": "Api response",
+                "properties": {
+                    "code": {
+                        "title": "Code",
+                        "description": "Code",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "body": {
+                        "title": "Body",
+                        "description": "Body",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "Ads": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "title": "name",
+                        "description": "name",
+                        "format": "int64"
+                    },
+                    "order": {
+                        "title": "order",
+                        "description": "order",
+                        "format": "int64"
+                    },
+                    "link": {
+                        "title": "link",
+                        "description": "link",
+                        "format": "string"
+                    },
+                    "page": {
+                        "title": "page",
+                        "description": "page",
+                        "format": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "Category": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "isActive": {
+                        "title": "isActive",
+                        "description": "isActive",
+                        "format": "boolean"
+                    },
+                    "author_id": {
+                        "title": "author_id",
+                        "description": "author_id",
+                        "format": "int64"
+                    },
+                    "type": {
+                        "title": "type",
+                        "description": "type",
+                        "format": "string"
+                    },
+                    "translated": {
+                        "$ref": "#/components/schemas/CategoryTranslation"
+                    }
+                },
+                "type": "object"
+            },
+            "CategoryTranslation": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "title": "name",
+                        "description": "name",
+                        "format": "string"
+                    },
+                    "description": {
+                        "title": "description",
+                        "description": "description",
+                        "format": "string"
+                    },
+                    "slug": {
+                        "title": "slug",
+                        "description": "slug",
+                        "format": "string"
+                    },
+                    "meta": {
+                        "title": "meta",
+                        "description": "meta",
+                        "format": "string"
+                    },
+                    "category_id": {
+                        "title": "category_id",
+                        "description": "category_id",
+                        "format": "int64"
+                    }
+                },
+                "type": "object"
+            },
+            "Post": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "author_id": {
+                        "title": "author_id",
+                        "description": "author_id",
+                        "format": "int64"
+                    },
+                    "viewCount": {
+                        "title": "viewCount",
+                        "description": "viewCount",
+                        "format": "int64"
+                    },
+                    "isActive": {
+                        "title": "isActive",
+                        "description": "isActive",
+                        "format": "boolean"
+                    },
+                    "publish_at": {
+                        "title": "publish_at",
+                        "description": "publish_at",
+                        "format": "string"
+                    },
+                    "translated": {
+                        "$ref": "#/components/schemas/PostTranslation"
+                    }
+                },
+                "type": "object"
+            },
+            "PostTranslation": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "title": "name",
+                        "description": "name",
+                        "format": "string"
+                    },
+                    "description": {
+                        "title": "description",
+                        "description": "description",
+                        "format": "string"
+                    },
+                    "slug": {
+                        "title": "slug",
+                        "description": "slug",
+                        "format": "string"
+                    },
+                    "meta": {
+                        "title": "meta",
+                        "description": "meta",
+                        "format": "string"
+                    },
+                    "locale": {
+                        "title": "locale",
+                        "description": "locale",
+                        "format": "string"
+                    },
+                    "post_id": {
+                        "title": "post_id",
+                        "description": "post_id",
+                        "format": "int64"
+                    }
+                },
+                "type": "object"
+            },
+            "CallRequests": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "category_id": {
+                        "title": "category_id",
+                        "description": "category_id",
+                        "format": "int64"
+                    },
+                    "is_called": {
+                        "title": "is_called",
+                        "description": "is_called",
+                        "format": "boolean"
+                    },
+                    "phone_number": {
+                        "title": "phone_number",
+                        "description": "phone_number",
+                        "format": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "City": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "user_id": {
+                        "title": "user_id",
+                        "description": "user_id",
+                        "format": "int64"
+                    },
+                    "is_active": {
+                        "title": "is_active",
+                        "description": "is_active",
+                        "format": "boolean"
+                    },
+                    "translated": {
+                        "$ref": "#/components/schemas/CityTranslation"
+                    }
+                },
+                "type": "object"
+            },
+            "CityTranslation": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "title": "name",
+                        "description": "name",
+                        "format": "string"
+                    },
+                    "locale": {
+                        "title": "locale",
+                        "description": "locale",
+                        "format": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "ContactRequests": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "seen": {
+                        "title": "seen",
+                        "description": "seen",
+                        "format": "boolean"
+                    },
+                    "phone": {
+                        "title": "phone",
+                        "description": "phone",
+                        "format": "string"
+                    },
+                    "title": {
+                        "title": "title",
+                        "description": "title",
+                        "format": "string"
+                    },
+                    "description": {
+                        "title": "description",
+                        "description": "description",
+                        "format": "string"
+                    },
+                    "subject": {
+                        "title": "subject",
+                        "description": "subject",
+                        "format": "string"
+                    },
+                    "email": {
+                        "title": "email",
+                        "description": "email",
+                        "format": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "Faq": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "is_active": {
+                        "title": "is_active",
+                        "description": "is_active",
+                        "format": "boolean"
+                    },
+                    "translated": {
+                        "$ref": "#/components/schemas/FaqTranslation"
+                    }
+                },
+                "type": "object"
+            },
+            "FaqTranslation": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "title": {
+                        "title": "title",
+                        "description": "title",
+                        "format": "string"
+                    },
+                    "locale": {
+                        "title": "locale",
+                        "description": "locale",
+                        "format": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "OrderGroupMessage": {},
+            "ServiceReview": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "value": {
+                        "title": "value",
+                        "description": "value",
+                        "format": "int64"
+                    }
+                },
+                "type": "object"
+            },
+            "Services": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "user_id": {
+                        "title": "user_id",
+                        "description": "user_id",
+                        "format": "int64"
+                    },
+                    "price": {
+                        "title": "price",
+                        "description": "price",
+                        "format": "double"
+                    },
+                    "is_active": {
+                        "title": "is_active",
+                        "description": "is_active",
+                        "format": "boolean"
+                    },
+                    "contact_number": {
+                        "title": "contact_number",
+                        "description": "contact_number",
+                        "format": "string"
+                    },
+                    "price_type": {
+                        "title": "price_type",
+                        "description": "price_type",
+                        "format": "string"
+                    },
+                    "has_online_payment": {
+                        "title": "has_online_payment",
+                        "description": "has_online_payment",
+                        "format": "boolean"
+                    },
+                    "has_serwish_quality": {
+                        "title": "has_serwish_quality",
+                        "description": "has_serwish_quality",
+                        "format": "boolean"
+                    },
+                    "translated": {
+                        "$ref": "#/components/schemas/ServicesTranslation"
+                    }
+                },
+                "type": "object"
+            },
+            "ServicesTranslation": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "title": {
+                        "title": "title",
+                        "description": "title",
+                        "format": "string"
+                    },
+                    "description": {
+                        "title": "description",
+                        "description": "description",
+                        "format": "string"
+                    },
+                    "locale": {
+                        "title": "locale",
+                        "description": "locale",
+                        "format": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "Slider": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "sort_order": {
+                        "title": "sort_order",
+                        "description": "sort_order",
+                        "format": "int64"
+                    },
+                    "isActive": {
+                        "title": "isActive",
+                        "description": "isActive",
+                        "format": "boolean"
+                    },
+                    "translated": {
+                        "$ref": "#/components/schemas/SliderTranslation"
+                    }
+                },
+                "type": "object"
+            },
+            "SliderTranslation": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "title": {
+                        "title": "title",
+                        "description": "title",
+                        "format": "string"
+                    },
+                    "locale": {
+                        "title": "locale",
+                        "description": "locale",
+                        "format": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "SpecialistCommentReview": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "specialist_id": {
+                        "title": "specialist_id",
+                        "description": "specialist_id",
+                        "format": "int64"
+                    },
+                    "user_id": {
+                        "title": "user_id",
+                        "description": "user_id",
+                        "format": "int64"
+                    },
+                    "likes": {
+                        "title": "likes",
+                        "description": "likes",
+                        "format": "boolean"
+                    },
+                    "description": {
+                        "title": "description",
+                        "description": "description",
+                        "format": "string"
+                    },
+                    "locale": {
+                        "title": "locale",
+                        "description": "locale",
+                        "format": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "SpecialistReview": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "value": {
+                        "title": "value",
+                        "description": "value",
+                        "format": "int64"
+                    }
+                },
+                "type": "object"
+            },
+            "Tags": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "user_id": {
+                        "title": "user_id",
+                        "description": "user_id",
+                        "format": "int64"
+                    },
+                    "is_active": {
+                        "title": "is_active",
+                        "description": "is_active",
+                        "format": "boolean"
+                    },
+                    "translated": {
+                        "$ref": "#/components/schemas/TagsTranslation"
+                    }
+                },
+                "type": "object"
+            },
+            "TagsTranslation": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "title": "name",
+                        "description": "name",
+                        "format": "string"
+                    },
+                    "locale": {
+                        "title": "locale",
+                        "description": "locale",
+                        "format": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "User": {
+                "properties": {
+                    "id": {
+                        "title": "id",
+                        "description": "id",
+                        "format": "int64"
+                    },
+                    "name": {
+                        "title": "name",
+                        "description": "name",
+                        "format": "string"
+                    },
+                    "email": {
+                        "title": "email",
+                        "description": "email",
+                        "format": "string"
+                    },
+                    "gender": {
+                        "title": "gender",
+                        "description": "gender",
+                        "format": "string"
+                    },
+                    "date_of_birth": {
+                        "title": "date_of_birth",
+                        "description": "date_of_birth",
+                        "format": "string"
+                    },
+                    "phone_number": {
+                        "title": "phone_number",
+                        "description": "phone_number",
+                        "format": "string"
+                    },
+                    "id_number": {
+                        "title": "id_number",
+                        "description": "id_number",
+                        "format": "string"
+                    },
+                    "personal": {
+                        "title": "personal",
+                        "description": "personal",
+                        "format": "string"
+                    },
+                    "client_type": {
+                        "title": "client_type",
+                        "description": "client_type",
+                        "format": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "UserWithdrawalRequests": {}
+        },
+        "securitySchemes": {
+            "Password Based": {
+                "type": "oauth2",
+                "description": "Use a global Authorization: Bearer token",
+                "in": "header",
+                "flows": {
+                    "password": {
+                        "authorizationUrl": "/oauth/token",
+                        "tokenUrl": "/oauth/token",
+                        "refreshUrl": "/oauth/token",
+                        "scopes": {}
+                    }
+                },
+                "scheme": "https"
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}

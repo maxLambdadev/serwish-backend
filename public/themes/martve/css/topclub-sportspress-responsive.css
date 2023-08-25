@@ -1,0 +1,225 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    .sp-player-gallery-wrapper dl.gallery-item .gallery-icon img {
+        min-width: 0 !important;
+        min-height: 0 !important;
+        height: auto !important;
+        width: 100% !important;
+    }
+    .sp-team-gallery-wrapper dl.gallery-item .gallery-icon img {
+        min-width: 0 !important;
+        min-height: 0 !important;
+        height: auto !important;
+        width: 100% !important;
+    }
+    .site-wrap .sp-team-logo .sp-team-name {
+        width: 120px;
+        font-size: 18px !important;
+    }
+    .site-wrap .sp-event-logos .sp-team-logo img {
+        display: inline-block;
+        max-width: 80px !important;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+    .sp-player-gallery-wrapper dl.gallery-item .gallery-icon img {
+        min-width: 0 !important;
+        min-height: 0 !important;
+        height: auto !important;
+        width: 100% !important;
+    }
+    .sp-team-gallery-wrapper dl.gallery-item .gallery-icon img {
+        min-width: 0 !important;
+        min-height: 0 !important;
+        height: auto !important;
+        width: 100% !important;
+    }
+    .site-wrap .sp-team-logo .sp-team-name {
+        width: 150px;
+        max-width: 150px;
+    }
+    .site-wrap .sp-event-logos .sp-team-logo img {
+        display: inline-block;
+        max-width: 110px;
+    }
+    .site-wrap .widget_sp_countdown .sp-event-league,
+    .site-wrap .widget_sp_countdown .sp-event-venue {
+        display: block !important;
+    }
+    .last-match-section .sp-event-blocks .sp-post td .team-logo {
+        margin-top: 10px;
+    }
+    .last-match-section .sp-event-blocks .team-logo {
+        margin-top: 0 !important;
+    }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+    .site-wrap .sp-template-staff-photo {
+        float: none;
+        display: inline-block;
+        margin: 0 0 10px 0;
+    }
+    .site-wrap .sp-template-staff-details .sp-list-wrapper .sp-staff-details {
+        padding: 15px 10px !important;
+    }
+    .site-wrap .sp-template-staff-details .sp-list-wrapper .sp-staff-details dt {
+        text-align: left;
+    }
+    .site-wrap .sp-template-staff-details .sp-list-wrapper .sp-staff-details dd {
+        text-align: right;
+    }
+    .sp-player-gallery-wrapper dl.gallery-item .gallery-icon img {
+        min-width: 0 !important;
+        min-height: 0 !important;
+        height: auto !important;
+        width: 100% !important;
+    }
+    .sp-team-gallery-wrapper dl.gallery-item .gallery-icon img {
+        min-width: 0 !important;
+        min-height: 0 !important;
+        height: auto !important;
+        width: 100% !important;
+    }
+    .site-wrap .sp-team-logo .sp-team-name {
+        width: 90px !important;
+        max-width: 90px !important;
+        font-size: 16px !important;
+    }
+    .site-wrap .sp-event-logos {
+        font-size: 20px !important;
+    }
+    .site-wrap .sp-event-logos .sp-team-logo img {
+        max-width: 70px !important;
+    }
+    .sp-template-event-performance {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 10px !important;
+        float: none !important;
+    }
+    .full-player-content .sp-section-content-photo {
+        display: block !important;
+    }
+    .full-player-content .sp-template-player-photo {
+        float: none !important;
+        display: inline-block !important;
+        margin: 0 !important;
+        height: auto;
+        width: 100% !important;
+    }
+    .full-player-content .sp-template-player-photo img {
+        display: inline-block !important;
+        width: 100% !important;
+        height: auto;
+    }
+    .full-player-content .sp-section-content-photo {
+        text-align: center !important;
+    }
+    .site-wrap .sp-event-logos .sp-team-logo img {
+        display: none !important;
+    }
+    .sp-template-event-logos-block {
+        margin-top: -100px !important;
+    }
+    .sp-template-event-logos-block .logo-odd,
+    .sp-template-event-logos-block .logo-even,
+    .sp-template-event-logos-block td .team-logo {
+        display: inline-block !important;
+        float: none !important;
+        width: 49% !important;
+        margin: 10px 0 !important;
+    }
+    .site-wrap .sp-player-gallery-wrapper .gallery-item {
+        width: 49.99% !important;
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    .site-wrap .sp-template-staff-photo {
+        width: 100% !important;
+        height: auto;
+        display: block !important;
+    }
+    .site-wrap .sp-template-staff-photo {
+        display: inline-block;
+        width: 100% !important;
+        max-width: none !important;
+        height: auto !important;
+    }
+    .sp-player-gallery-wrapper .gallery-item {
+        width: 100% !important;
+    }
+    .sp-team-gallery-wrapper .gallery-item {
+        width: 100% !important;
+    }
+    .site-wrap .sp-team-logo {
+        margin: 5px 0;
+        display: block !important;
+    }
+    .site-wrap .sp-event-logos .sp-team-logo img {
+        display: none !important;
+    }
+    .sp-event-video iframe {
+        max-height: 200px;
+        width: auto;
+    }
+    .site-wrap .widget_sp_birthdays .sp-template-birthday-gallery {
+        width: 100% !important;
+    }
+    .match-info-span {
+        display: block;
+        width: 100%;
+    }
+    .site-wrap .last-match-section .last-match-info-line {
+        display: block;
+        font-size: 10px !important;
+    }
+    .site-wrap .last-match-section .match-info-span {
+        padding: 0 0 20px 0;
+    }
+    .site-wrap .last-match-section .last-match-info-line {
+        margin-bottom: 5px !important;
+    }
+    .site-wrap .last-match-section .last-match-info-line:last-child {
+        margin-bottom: 0 !important;
+    }
+    .site-wrap .last-match-section .match-info-span:before,
+    .site-wrap .last-match-section .match-info-span:after {
+        display: none;
+    }
+    .site-wrap .last-match-section .sp-template .sp-table-wrapper tbody tr td .sp-event-title a {
+        color: #fff !important;
+        font-weight: 700 !important;
+        font-size: 14px !important;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+    .sp-template-event-logos-block {
+        margin-top: 0 !important;
+    }  
+    .site-wrap .sp-player-gallery-wrapper .gallery-item {
+        width: 100% !important;
+    }
+
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+        
+}
+
+
+@media only screen and (min-width : 768px) and (max-width : 782px) {
+    
+}
+
+@media only screen and (min-width : 783px) {
+    
+}
+
+

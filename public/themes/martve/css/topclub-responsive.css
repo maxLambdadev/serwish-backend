@@ -1,0 +1,1097 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    /* HEAD MENU */
+    .head-menu-wrap .head-menu-list li a {
+        padding: 0 10px;
+    }
+   /* NEWS */
+    .news-item {
+        width: 290px;
+    }
+    .news-img-wrap {
+        width: 290px;
+        max-height: 210px;
+    }
+    .news-title {
+        font-size: 22px;
+        line-height: 22px;
+        margin-bottom: 10px;
+    }
+    .news-info {
+        padding-top: 20px;
+    }
+    .news-date, 
+    .news-author, 
+    .news-comments {
+        margin-bottom: 5px;
+    }
+    /* LEAGUE TABLE */
+    .tbl-logo-img {
+        display: none;
+    }
+    .table-team-name {
+        width: auto;
+        vertical-align: middle;
+        height: auto;
+        line-height: 15px;
+    }
+    /* LAST MATCH */
+    .sidebar-team-logo {
+        width: 90px;
+        height: 90px;
+    }
+    .sidebar-logo-img {
+        max-height: 90px;
+    }
+    .sidebar-team-name {
+        width: 90px;
+    }
+    .sidebar-match-vs {
+        padding: 50px 5px;
+    }
+    .sidebar-team-name {
+        font-size: 12px;
+        font-weight: 700;
+    }
+    /* LATEST RESULT */
+    .last-results-logo {
+        display: none;
+    }
+    /* Team */
+    .cat-team-item {
+        width: 32%;
+    }
+    .cat-player-info {
+        font-size: 13px;
+    }
+    
+    /* Fixture Single */
+    .full-fixture-content .full-fixture-team {
+        width: 340px;
+    }
+    .full-fixture-content .full-fixture-team-name {
+        font-size: 22px;
+        max-width: 220px;
+    }
+    /* Our Team Section */
+    .team-item {
+        width: 220px;
+    }
+    .player-img-wrap {
+        width: 220px;
+    }
+    .player-name {
+        width: 160px;
+    }
+    .player-name-span {
+        width: 155px;
+        font-size: 11px;
+    }
+    .player-number {
+        width: 35px;
+        font-size: 20px;
+    }
+    /* Fixtures Page */
+    .fixture-team1,
+    .fixture-team2 {
+        width: 350px;
+    }
+    .matchstats-teamname1,
+    .matchstats-teamname2,
+    .matchstats-scorers1,
+    .matchstats-scorers2,
+    .matchstats-scorers2,
+    .matchstats-progress-wrap1,
+    .matchstats-progress-wrap2 {
+        width: 35%;
+    }
+    /* Media */
+    .lightcase-inlineWrap div iframe {
+        min-height: 360px;
+    }
+    /* Player - Single */
+    .full-player-info {
+        padding: 10px;
+        margin-top: 0;
+        font-size: 12px;
+    }
+    .player-info-cont {
+        max-width: 140px;
+    }
+    .player-nosb .player-info-cont {
+        max-width: 100%;
+    }
+    /* --- */
+    .logo-block-overlay {
+        height: 120px;
+    }
+
+    .logo-block-overlay .logo-img {
+        max-height: 110px;
+        margin-top: 5px;
+    }
+
+    .logo-block-overlay .logo-img-wrap {
+        height: 120px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+    .site-wrap-sticky {
+        margin-top: 70px;
+    }
+    /* HEAD MENU */
+    .secondline {
+        min-height: 30px;
+    }
+    .head-menu-wrap .head-menu-list li a {
+        padding: 0 10px;
+        height: 30px;
+        line-height: 30px;
+    }
+    /* LOGO */
+    .logo-block {
+        height: 70px;
+        width: 120px;
+    }
+    .logo-img-wrap {
+        height: 70px;
+        width: 120px;
+        line-height: 70px;
+    }
+    .logo-img {
+        vertical-align: top;
+        max-height: 60px;
+        max-width: 110px;
+        margin-top: 5px;
+    }
+    
+    /* LEAGUE TABLE */
+    .tbl-logo-img {
+        display: inline-block;
+    }
+    .table-team-name {
+        line-height: 30px;
+    }
+   /* LAST MATCH */
+    .last-match-team1,
+    .last-match-team2 {
+        width: 320px;
+    }
+    .match-team-name {
+        font-size: 18px;
+    }
+    .last-match-logo {
+        max-width: 60px;
+        max-height: 60px;
+    }
+    .last-match-vs {
+        padding: 0 10px;
+    }
+    /* NEWS */
+    .news-item {
+        width: 345px;
+    }
+    .news-img-wrap {
+        width: 345px;
+        max-height: 255px;
+    }
+    .news-title {
+        font-size: 22px;
+        line-height: 22px;
+        margin-bottom: 5px;
+    }
+    .news-info {
+        padding: 20px 15px 0 15px;
+    }
+    .news-views,
+    .news-comments,
+    .news-likes,
+    .news-date {
+        margin: 0 5px;
+    }
+    /* Score Table */
+    .scoretable-tbl tbody tr td {
+        padding: 10px 5px;
+    }
+    /* Slider */
+    .slider-title {
+        font-size: 50px;
+    }
+    /* Fixture Single */
+    .full-fixture-content .full-fixture-team {
+        width: 220px;
+    }
+    .full-fixture-content .full-fixture-team-name {
+        font-size: 20px;
+        max-width: 180px;
+    }
+    .full-fixture-content .full-fixture-team-logo {
+        display: none;
+    }
+    /* Fixtures Page */
+    .fixture-logo-img1,
+    .fixture-logo-img2 {
+        display: none;
+    }
+    .fixture-team1,
+    .fixture-team2 {
+        width: 250px;
+    }
+    .matchstats-teamname1,
+    .matchstats-teamname2,
+    .matchstats-scorers1,
+    .matchstats-scorers2,
+    .matchstats-scorers2,
+    .matchstats-progress-wrap1,
+    .matchstats-progress-wrap2 {
+        width: 30%;
+    }
+    /* Media Section */
+    .media-wrap {
+        column-count: 2;
+        column-gap: 10px;
+        -moz-column-count: 2;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 5px;
+    }
+    /* Single Player */
+    .full-player-img-nosb {
+        width: 100%;
+    }
+    /* --- */
+    .qm-head-wrap {
+        margin-left: 155px;
+    }
+    .quadmenu-head-menu .quadmenu-navbar-nav > li.quadmenu-item {
+        height: 30px !important;
+    }
+    /* --- */
+    .logo-block-overlay {
+        height: 100px;
+    }
+
+    .logo-block-overlay .logo-img {
+        max-height: 80px;
+        margin-top: 10px;
+    }
+
+    .logo-block-overlay .logo-img-wrap {
+        height: 80px;
+    }
+    .logo-block-overlay .logo-img-wrap {
+        box-shadow: none;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+    .site-wrap-sticky {
+        margin-top: 0;
+    }
+    .navbar-fixed-top {
+        position: static;
+    }
+    /* Resets */
+    .no-sm {
+        display: none;
+    }
+    /* HEADER */
+    .sm-no-padding {
+        padding: 0;
+    }
+    .firstline {
+        height: 80px;
+    }
+    .secondline {
+        height: auto;
+    }
+    /* LOGO */
+    .logo-block {
+        height: 115px;
+        width: 150px;
+        margin-top: 41px;
+        left: 50%;
+        margin-left: -75px;
+    }
+    .logo-img-wrap {
+        height: 115px;
+        width: 150px;
+    }
+    .logo-img {
+        vertical-align: middle;
+        max-height: 100px;
+        max-width: 140px;
+        margin-top: 0;
+    }
+    /* HEAD MENU */
+    .head-menu-container {
+        background-color: #333;
+        margin-bottom: 5px;
+    }
+    .head-menu-wrap {
+        text-align: center;
+    }
+    .head-menu-wrap .head-menu-list {
+        display: block;
+        margin-left: 0;
+        margin-top: 30px;
+        z-index: 50;
+        background-color: #1f1f1f;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .head-menu-wrap .head-menu-list li {
+        display: block;
+        width: 100%;
+    }
+    .head-menu-wrap .head-menu-list li a {
+        display: block;
+        width: 100%;
+        padding: 0 20px;
+        height: 60px;
+        line-height: 60px;
+    }
+    .top-socials-wrap {
+        display: none;
+    }
+    .head-menu-wrap .head-menu-list .dropdown-menu {
+        width: 100%;
+        background-color: #1f1f1f;
+        border-top: 2px solid #0070a0;
+        float: none;
+        position: static;
+    }
+    .dropdown-toggle-wrap {
+        display: inline-block;
+    }
+    .open .dropdown {
+		display: block;
+	}
+    .head-menu-wrap .head-menu-list .dropdown-menu li {
+        text-align: center;
+    }
+    .head-menu-wrap .head-menu-list .dropdown-menu li a {
+        padding: 10px 0;
+        font-weight: 700;
+        color: #fff;
+    }
+    .navbar-collapse {
+        border-top: 0;
+        box-shadow: none;
+    }
+    .head-menu-wrap .head-menu-list li a:focus {
+        color: #333;
+    }
+    .menu-search-wrap {
+        float: none;
+        position: static;
+    }
+    .searchbar {
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .top-btns-wrap {
+        text-align: center;
+        position: relative;
+    }
+    .top-btn {
+        display: inline-block;
+        height: 100%;
+        vertical-align: top;
+    }
+    .menu-search-wrap {
+        display: inline-block;
+        height: 100%;
+        vertical-align: top;
+    }
+	/* LAST MATCH */
+    .last-match-team1,
+    .last-match-team2 {
+        width: 100%;
+        display: block;
+        text-align: center;
+        line-height: 15px;
+    }
+    .last-match-logo {
+        display: none;
+    }
+    .match-team-name {
+        display: block;
+        font-size: 15px;
+    }
+    .last-match-vs {
+        display: block;
+        font-size: 30px;
+        padding-bottom: 0;
+    }
+    .match-info-span {
+        padding: 0 30px 20px 30px;
+    }
+    /* BIG NEWS */
+    .big-news-text {
+        width: 300px;
+    }
+    .big-news-title-h {
+        font-size: 20px;
+    }
+    .big-news-info {
+        font-size: 12px;
+    }
+    .big-news-btn {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    /* NEWS */
+    .news-item {
+        width: 100%;
+    }
+    .news-img-wrap {
+        width: 100%;
+        height: 100%;
+    }
+    .news-title {
+        font-size: 22px;
+        line-height: 22px;
+        height: 100%;
+        margin-bottom: 10px;
+    }
+    .news-text {
+        line-height: 20px;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+    .news-info {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .news-views,
+    .news-comments,
+    .news-likes,
+    .news-date {
+        margin: 5px 5px;
+    }
+    .news-category-span {
+        font-size: 12px;
+        line-height: 12px;
+    }
+    .news-category-span:after {
+        right: -12px;
+    }
+    /* Score Table */
+    .scoretable-tbl tbody tr td {
+        padding: 10px;
+    }
+    .scoretable-logo {
+        display: none;
+    }
+    /* Slider */
+    .slider-title {
+        font-size: 40px;
+    }
+    .slider-btn {
+        padding: 10px 20px;
+    }
+    .slider-caption {
+        display: none;
+    }
+    /* Team */
+    .cat-team-item {
+        width: 49%;
+    }
+    .cat-player-img-wrap {
+        width: 100%;
+    }
+    .cat-player-position {
+        width: 85%;
+    }
+    .player-info-content-wrap {
+        text-align: center;
+    }
+    .player-info-line {
+        text-align: left;
+    }
+    .player-info-cont {
+        max-width: 250px;
+    }
+    .player-nosb .player-info-cont {
+        max-width: 100%;
+    }
+    /* Fixtures */
+    .fixture-logo-img1,
+    .fixture-logo-img2 {
+        display: none;
+    }
+    /* Fixture Single */
+    .full-fixture-item-wrap {
+        padding: 30px 10px;
+    }
+    .full-fixture-content .full-fixture-team {
+        width: 130px;
+    }
+    .full-fixture-content .full-fixture-team-name {
+        font-size: 16px;
+        max-width: 130px;
+    }
+    .full-fixture-content .full-fixture-results,
+    .full-fixture-content .full-fixture-results .full-fixture-result,
+    .full-fixture-content .full-fixture-results .full-fixture-divider {
+        font-size: 18px;
+    }
+    .full-fixture-result,
+    .full-fixture-result-divider {
+        vertical-align: middle;
+        font-size: 18px;
+    }
+    .full-fixture-content .full-fixture-results {
+        margin: 0;
+        padding: 0;
+    }
+    .full-fixture-match-info {
+        font-size: 11px;
+    }
+    .matchstats-scorers1,
+    .matchstats-scorers2,
+    .matchstats-scorers2,
+    .matchstats-progress-wrap1,
+    .matchstats-progress-wrap2 {
+        display: block;
+        width: 100%;
+    }
+    .fixture-teamnames-line,
+    .matchstats-teamname1,
+    .matchstats-teamname2 {
+        display: block;
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+    }
+    .matchstats-teamname1,
+    .matchstats-teamname2 {
+        padding: 5px 10px;
+    }
+    .matchstats-teamname1 {
+        border-left: 3px solid #1f66ad;
+        border-right: 3px solid #1f66ad;
+        background-color: #f1f1f1;
+    }
+    .matchstats-teamname2 {
+        border-left: 3px solid #ad1f1f;
+        border-right: 3px solid #ad1f1f;
+        background-color: #f1f1f1;
+    }
+    .fixture-teamnames-line {
+        text-align: center;
+    }
+    .matchstats-scorers1,
+    .matchstats-scorers2 {
+        text-align: center;
+        padding: 5px 10px;
+        background-color: #f1f1f1;
+    }
+    .matchstats-scorers1 {
+        border-left: 3px solid #1f66ad;
+        border-right: 3px solid #1f66ad;
+    }
+    .matchstats-scorers2 {
+        border-left: 3px solid #ad1f1f;
+        border-right: 3px solid #ad1f1f;
+    }
+    .fixture-matchstats-scorers,
+    .fixture-teamnames-line,
+    .fixture-matchstats-line {
+        margin: 20px 0;
+        border: 2px solid #e6e6e6;
+        padding: 10px;
+    }
+    .matchstats-progress-number1,
+    .matchstats-progress-number2,
+    .matchstats-progress-wrap1,
+    .matchstats-progress-wrap2 {
+        text-align: left;
+        left: 0;
+    }
+    .matchstats-yellow-card1,
+    .matchstats-yellow-card2,
+    .matchstats-red-card1,
+    .matchstats-red-card2 {
+        display: block;
+        text-align: center;
+        width: 100%;
+        background-color: #f1f1f1;
+    }
+    .matchstats-yellow-card1,
+    .matchstats-red-card1 {
+        border-left: 3px solid #1f66ad;
+        border-right: 3px solid #1f66ad;
+    }
+    .matchstats-yellow-card2,
+    .matchstats-red-card2 {
+        border-left: 3px solid #ad1f1f;
+        border-right: 3px solid #ad1f1f;
+    }
+    .matchstats-cards-number {
+        color: #929599;
+    }
+    /* Footer */
+    .section-title-h::after {
+        display: none;
+    }
+    .section-title-wrap {
+        background-color: #e6e6e6;
+    }
+    /* Our Team Section */
+    .team-item {
+        width: 90%;
+    }
+    .player-img-wrap {
+        width: 100%;
+    }
+    .player-name {
+        width: 80%;
+        margin-right: 0;
+    }
+    
+    .player-name:after {
+        display: none;
+    }
+    
+    .player-name-span {
+        width: 100%;
+        font-size: 11px;
+    }
+    .player-number {
+        width: 20%;
+        font-size: 20px;
+        border-bottom: 0;
+        background-color: #1f1f1f;
+    }
+    /* Fixtures Page */
+    .fixture-team1,
+    .fixture-team2 {
+        width: 40%;
+    }
+    .fixture-team-name {
+        font-size: 16px;
+    }
+    .fixture-match-info {
+        font-size: 12px;
+    }
+    .fixture-results {
+        padding: 10px 0;
+    }
+    /* Media Section */
+    .media-wrap {
+        column-count: 2;
+        column-gap: 10px;
+        -moz-column-count: 2;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 10px;
+    }
+    .media-archive {
+        margin-top: 10px;
+        column-count: 2;
+        column-gap: 10px;
+        -moz-column-count: 2;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 5px;
+    }
+    .media-item-caption {
+        padding: 5px 10px;
+    }
+    .lightcase-inlineWrap div iframe {
+        min-height: 280px;
+    }
+    /* Shop */
+    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+        width: 49%;
+    }
+    /* Player - Single */
+    .full-player-info {
+        display: block;
+        width: 100%;
+    }
+    .full-player-img-wrap {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .full-player-img {
+        width: 50%;
+    }
+    .full-player-img-nosb {
+        width: 50%;
+    }
+    /* Search Results Page */
+    .search-item {
+        width: 100%;
+    }
+    /* 404 Page */
+    .error-page-h {
+        font-size: 30px;
+    }
+    /* Inside Posts WP Gallery */
+    .gallery-item {
+        width: 100% !important;
+    }
+    /* Shortcodes */
+    .price-tables-2columns .price-option,
+    .price-tables-3columns .price-option,
+    .price-tables-4columns .price-option,
+    .price-tables-5columns .price-option {
+        width: 49%;
+    }
+    .price-option {
+        margin-bottom: 10px;
+    }
+    /* Shop Section */
+    .shop-section .product {
+        width: 100%;
+    }
+    /* Menu Multiple Cols */
+    .head-menu-list .headmenu-multiple-cols .dropdown-menu {
+        max-height: none;
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .head-menu-list .headmenu-multiple-cols .dropdown-menu li {
+        width: 100%;
+        display: block;
+    }
+
+    .head-menu-list .headmenu-multiple-cols .dropdown-menu li a {
+        width: auto;
+        display: block;
+    }
+    
+    /* --- */
+    .qm-head-wrap {
+        margin-left: 0;
+    }
+    .quadmenu-head-menu .quadmenu-navbar-nav > li.quadmenu-item {
+        height: auto !important;
+        min-height: 40px;
+    }
+    /* --- */
+    .logo-block-overlay {
+        height: 104px;
+        z-index: 9999;
+    }
+    .logo-block-overlay .logo-img {
+        max-height: 80px;
+        margin-top: 10px;
+    }
+
+    .logo-block-overlay .logo-img-wrap {
+        height: 80px;
+    }
+    .logo-block-overlay .logo-img-wrap {
+        box-shadow: none;
+    }
+    
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    /* HEAD MENU */
+    .head-menu-container {
+        margin-top: 80px;
+        text-align: center;
+        background-color: #1f1f1f;
+    }
+    .dropdown-toggle-wrap {
+        width: 100%;
+        text-align: center;
+    }
+    .navbar-toggle {
+        display: inline-block;
+        float: none;
+        background-color: #1f1f1f;
+    }
+    /* BIG NEWS */
+    .big-news-text {
+        width: 180px;
+    }
+    .big-news-title-h {
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .big-news-date {
+        font-size: 10px;
+    }
+    .big-news-info,
+    .big-news-btn-wrap {
+        display: none;
+    }
+    /* LEAGUE TABLE */
+    .tbl-logo-img {
+        display: none;
+    }
+    .table-team-name {
+        line-height: 15px;
+    }
+    .tbl-td {
+        padding: 10px 2px;
+    }
+   /* LAST MATCH */
+    .last-match-team1,
+    .last-match-team2 {
+        
+    }
+    .last-match-logo {
+        max-width: 40px;
+        max-height: 40px;
+    }
+    .match-team-name {
+        font-size: 15px;
+    }
+    .last-match-vs {
+        font-size: 30px;
+    }
+    .match-info-span {
+        font-size: 11px;
+    }
+    /* SIDEBAR - NEXT MATCH */
+    .sidebar-team-name {
+        width: 80px;
+    }
+    .sidebar-team-logo {
+        width: 80px;
+        height: 80px;
+    }
+    .sidebar-logo-img {
+        max-height: 80px;
+    }
+    .sidebar-match-vs {
+        padding: 50px 5px;
+        font-size: 20px;
+    }
+    /* LAST RESULTS */
+    .last-results-item {
+        border-bottom: 2px solid #333;
+    }
+    .last-results-team {
+        display: block;
+    }
+    .last-results-vs {
+        display: block;
+        border: 0;
+    }
+    .first-team-result,
+    .second-team-result {
+        display: block;
+    }
+    .result-divider {
+        display: block;
+    }
+    /* Score Table */
+    .scoretable-tbl tbody tr td {
+        padding: 10px 5px;
+    }
+    /* Slider */
+    .slider-text {
+        text-align: center;
+        left: 10%;
+    }
+    .slider-title {
+        font-size: 30px;
+        text-align: center;
+        display: block;
+    }
+    .slider-caption {
+        display: none;
+    }
+    .slider-btn-wrap {
+        text-align: center;
+    }
+    .slider-btn {
+        padding: 5px 10px;
+    }
+    /* Shop */
+    .woocommerce .products .add_to_cart_button {
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+    /* Fixture Single */
+    .full-fixture-content .full-fixture-results,
+    .full-fixture-content .full-fixture-results .full-fixture-result,
+    .full-fixture-content .full-fixture-results .full-fixture-divider,
+    .fixture-match-info-span {
+        display: block;
+    }
+    .fixture-match-info-span {
+       margin-bottom: 5px;
+       margin-right: 0;
+    }
+    .fixture-match-info-span:last-child {
+       margin-bottom: 0;
+    }
+    .full-fixture-content .full-fixture-results {
+        display: block;
+        padding: 15px 0;
+    }
+    .full-fixture-result-divider {
+        line-height: 20px;
+        vertical-align: top;
+    }
+    /* Our Team */
+    .players-nav-container {
+        display: block;
+        float: none;
+        text-align: center;
+    }
+    /* Fixtures Page */
+    .fixture-team1,
+    .fixture-team2 {
+        width: auto;
+        display: block;
+    }
+    .fixture-team1,
+    .fixture-team2 {
+        text-align: center;
+    }
+    .fixture-match-info {
+        margin-top: 10px;
+    }
+    /* Media Section */
+    .media-wrap {
+        column-count: 1;
+        column-gap: 10px;
+        -moz-column-count: 1;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 1;
+        -webkit-column-gap: 5px;
+    }
+    .media-archive {
+        margin-top: 10px;
+        column-count: 1;
+        column-gap: 10px;
+        -moz-column-count: 1;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 1;
+        -webkit-column-gap: 5px;
+    }
+    .media-item-caption {
+        padding: 15px 20px;
+    }
+    /* Shop */
+    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+        width: 100%;
+    }
+    /* Player - Single */
+    .full-player-info {
+        display: block;
+        width: 100%;
+    }
+    .full-player-img-wrap {
+        display: block;
+        width: 100%;
+    }
+    .full-player-img {
+        width: 100%;
+    }
+    .full-player-img-nosb {
+        width: 100%;
+    }
+    .player-info-label {
+        display: inline-block;
+    }
+    .player-info-cont {
+        display: inline-block;
+        
+    }
+    .full-player-info {
+        padding: 30px 5px;
+        margin-top: 0;
+    }
+    .player-addinf-list li {
+        vertical-align: top;
+        border-bottom: 0;
+        border-top: 1px solid #e6e6e6;
+    }
+    .player-addinf-list li .addinf-list-label {
+        display: block;
+        vertical-align: top;
+    }
+    .player-addinf-list li .addinf-list-cont {
+        display: block;
+        float: none;
+    }
+    /* Player Archive */
+    .cat-player-info-wrap {
+        width: 79%;
+        padding-right: 5px;
+    }
+    .cat-player-number {
+        width: 20%;
+        font-size: 25px;
+    }
+    .cat-team-item {
+        width: 99%;
+        margin-bottom: 10px;
+    }
+    /* 404 Page */
+    .error-page-h {
+        font-size: 20px;
+    }
+    /* Inside Posts WP Gallery */
+    .gallery-item {
+        width: 100% !important;
+    }
+    /* Media */
+    .mediatab-audio {
+        min-width: 220px;
+    }
+    /* Footer */
+    .footer-email-form {
+        display: block;
+        width: 100%;
+    }
+    .footer-email-submit {
+        display: block;
+        width: 100%;
+    }
+    /* Shortcodes */
+    .price-tables-2columns .price-option,
+    .price-tables-3columns .price-option,
+    .price-tables-4columns .price-option,
+    .price-tables-5columns .price-option {
+        width: 99%;
+    }
+    /* Shop Section */
+    .shop-section .product {
+        width: 100%;
+    }
+    .logo-block-overlay .logo-img-wrap {
+        box-shadow: none;
+    }
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+        
+}
+
+
+@media only screen and (min-width : 768px) and (max-width : 782px) {
+    .navbar-wp-panel {
+        margin-top: 46px;
+    }
+}
+
+@media only screen and (min-width : 783px) {
+    .navbar-wp-panel {
+        margin-top: 32px;
+    }
+}
+
+
+
+
+
