@@ -91,7 +91,6 @@ class User extends Authenticatable
         'status',
         'is_active',
         'fb_id',
-        'google_id',
         'extraPic'
     ];
 

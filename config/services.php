@@ -37,11 +37,12 @@ return [
     // 'facebook' => [
     //     'client_id' => '1231210724264182',
     //     'client_secret' => 'b2fea3b46ed8dbad453eb5a111e83ab5',
-    //     'redirect' => 'https://test.serwish.ge/api/auth/facebook/callback'
+    //     'redirect' => 'https://api.serwish.ge/api/auth/facebook/callback'
     // ],
     'google' => [
         'client_id' => '664688263844-dhs3jahd43lusvsjo7jvgu4kroepbteu.apps.googleusercontent.com',
         'client_secret' => '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',
-        'redirect' => 'https://test.serwish.ge/api/auth/google/callback'
+        'redirect' => 'https://api.serwish.ge/api/auth/google/callback'
     ],
+    
 ];

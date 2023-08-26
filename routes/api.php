@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-URL::forceScheme('https');
+
 Route::middleware(['cors'])->group(function () {
 
     Route::get('/packet-list',[OrdersController::class,'packetList']);

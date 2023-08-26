@@ -125,11 +125,11 @@ class UserController extends ApiController
 
         $user->save();
 
-        // //update redis
+        //update redis
         // Redis::del('current_user.'.$user->id);
         // Redis::set('current_user.'.$user->id, json_encode($user));
 
-        return $this->response(200, );
+        return $this->response(200);
     }
 
     /**

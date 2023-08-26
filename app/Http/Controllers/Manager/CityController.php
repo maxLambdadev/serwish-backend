@@ -39,7 +39,6 @@ class CityController extends BaseController
         if($request->position){
             $data["position"] = (int)$request->position;
         }
-
         if ($request->id){
             City::updateOrCreate(['id'=>$request->id], $data );
         }else{

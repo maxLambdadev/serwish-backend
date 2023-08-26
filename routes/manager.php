@@ -32,7 +32,7 @@ use \App\Http\Controllers\Manager\PayablePacketController;
 |
 */
 
-URL::forceScheme('https');
+
 Route::middleware(['auth','role:administrator|moderator|merchant|sales|warehouse|seo სპეციალისტი|ბლოგერი'])->name('manager.')->group(function (){
 
     Route::prefix('payable-packet')->name('payable-packet.')->group(function (){

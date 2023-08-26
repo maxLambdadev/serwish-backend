@@ -115,7 +115,7 @@ class ServiceCategoryController extends BaseController
         $data['type'] = 'SPECIALIST';
         $data['isActive'] = false;
         $data['author_id'] = Auth::user()->id;
-        
+
         if ($request->isActive == "on"){
             $data['isActive'] = true;
         }

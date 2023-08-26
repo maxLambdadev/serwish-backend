@@ -39,7 +39,6 @@ class ServiceController extends BaseController
         // $dates = explode('-', $date);
         // $startDate = (!empty(request()->get('daterange'))) ? Carbon::parse($dates[0]) : Carbon::now()->startOfDay()->toDateTimeString();
         // $endDate = (!empty(request()->get('daterange'))) ? Carbon::parse($dates[1])->addDay() : Carbon::now()->endOfDay()->toDateTimeString();
-     
         $this->response['categories'] = Category::with(['tags', 'images', 'childrens' => function($query){
             $query->where('isActive', '=', true);
         }])
@@ -49,8 +48,9 @@ class ServiceController extends BaseController
             ->get();
         
         if ($request->review_type == 'started') {
-            // $this->response['list'] = $this->model->orderBy('created_at','DESC')->get();
             $this->model = $this->model->where('review_status', '=', 'started');
+
+            // $this->response['list'] = $this->model->orderBy('created_at','DESC')->get();
             
             // return $this->responseView($this->viewData['list']);
             $this->model = $this->model
@@ -59,7 +59,6 @@ class ServiceController extends BaseController
             ->selectRaw('services.*, COUNT(DISTINCT services_statistics.id) as views_count, COUNT(DISTINCT services_phone_click_statistics.id) as calls_count')
             ->groupBy('services.id')
             ->orderBy('created_at','DESC');
-
 
             $mydata = parent::list($request, $ordering);
 
@@ -114,7 +113,16 @@ class ServiceController extends BaseController
                 });
             }
 
-            $twentyFourHoursAgo = now()->subHours(24);
+            // $twentyFourHoursAgo = now()->subHours(24);
+            // Get the current date and time
+            $now = Carbon::now();
+
+            // Set the time to midnight (00:00:00) for today
+            // $todayStart = $now->copy()->startOfDay();
+            $twentyFourHoursAgo = $now->copy()->startOfDay();
+
+            // Modify your query to use the $todayStart variable
+            // $twentyFourHoursAgo = $todayStart->copy()->subHours(24);
             
             // $this->model = $this->model
             // ->leftJoin('services_phone_click_statistics', 'services.id', '=', 'services_phone_click_statistics.service_id')
@@ -135,7 +143,6 @@ class ServiceController extends BaseController
             ->selectRaw('services.*, COALESCE(COUNT(DISTINCT services_statistics.id), 0) as views_count, COALESCE(COUNT(DISTINCT services_phone_click_statistics.id), 0) as calls_count')
             ->groupBy('services.id');
 
-
             //->orderBy('services.created_at', 'desc');
 
             // $this->model = $this->model
@@ -148,8 +155,8 @@ class ServiceController extends BaseController
                 $ordering = [$request->filter, $request->order];
             }
         }
-
         $mydata = parent::list($request, $ordering);
+
         $cats = DB::table('services_to_categories')->get();
 
         foreach ($mydata['list'] as $serv) {

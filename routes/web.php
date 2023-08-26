@@ -6,8 +6,7 @@ use Carbon\Carbon;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
-
+ \URL::forceScheme('https');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-URL::forceScheme('https');
+
 
 
 Route::get('payment/callbac',function (Request $request){
@@ -81,6 +80,6 @@ Route::post('/register',[RegisterController::class,'processRegister'])->name('pr
 
 //todo
 Route::get('/', function(){
- return "11111";
+ return "00110";
 });
 

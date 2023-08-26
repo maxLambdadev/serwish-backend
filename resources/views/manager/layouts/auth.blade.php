@@ -8,9 +8,9 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('manager/plugins/fontawesome-free/css/all.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('manager/plugins/fontawesome-free/css/all.min.css')}}">
     <!-- icheck bootstrap -->
-    <link rel="stylesheet" href="{{asset('manager/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('manager/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('manager/dist/css/adminlte.min.css')}}">
 </head>
@@ -21,10 +21,10 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="{{asset('manager/plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{secure_asset('manager/plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
-<script src="{{asset('manager/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{secure_asset('manager/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="{{asset('manager/dist/js/adminlte.min.js')}}"></script>
+<script src="{{secure_asset('manager/dist/js/adminlte.min.js')}}"></script>
 </body>
 </html>

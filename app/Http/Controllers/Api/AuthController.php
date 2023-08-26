@@ -105,6 +105,7 @@ class AuthController extends ApiController
         try {
             $user = Socialite::driver('facebook')->stateless()->user();
             $isUser = User::where('fb_id', $user->id)->first();
+
             if($isUser){
                 Auth::login($isUser);
                 if ($user->email !== null)
@@ -113,8 +114,7 @@ class AuthController extends ApiController
 //                $isUser->extraPic = $user->getAvatar();
                 $isUser->save();
                 $token = $isUser->createToken('user');
-                $phone_verified = $isUser->phone_number?"true":"false";
-                return Redirect::to("http://test-front.serwish.ge/?token=".$token->accessToken."&method=facebook&phone_number=".$phone_verified);
+                return Redirect::to("https://serwish.ge/?token=".$token->accessToken);
             }else{
                 if ($user->email == null){
                         return abort(400, "you email not exists");
@@ -144,8 +144,7 @@ class AuthController extends ApiController
 
                 Auth::login($createUser);
                 $token = $createUser->createToken('user');
-                $phone_verified = $createUser->phone_number?"true":"false";
-                return Redirect::to("http://test-front.serwish.ge/?token=".$token->accessToken."&method=facebook&phone_number=".$phone_verified);
+                return Redirect::to("https://serwish.ge/?token=".$token->accessToken);
             }
 
         } catch (Exception $exception) {
@@ -176,7 +175,8 @@ class AuthController extends ApiController
                 $isUser->save();
                 $token = $isUser->createToken('user');
                 $phone_verified = $isUser->phone_number?"true":"false";
-                return Redirect::to("http://test-front.serwish.ge/?token=".$token->accessToken."&method=google&phone_number=".$phone_verified);
+                // return Redirect::to("http://localhost:4200/?token=".$token->accessToken."&method=google&phone_number=".$phone_verified);
+                return Redirect::to("https://serwish.ge/?token=".$token->accessToken."&method=google&phone_number=".$phone_verified);
             }else{
                 if ($user->email == null){
                         return abort(400, "you email not exists");
@@ -207,7 +207,8 @@ class AuthController extends ApiController
                 Auth::login($createUser);
                 $token = $createUser->createToken('user');
                 $phone_verified = $createUser->phone_number?"true":"false";
-                return Redirect::to("http://test-front.serwish.ge/?token=".$token->accessToken."&method=google&phone_number=".$phone_verified);
+                // return Redirect::to("http://localhost:4200/?token=".$token->accessToken."&method=google&phone_number=".$phone_verified);
+                return Redirect::to("https://serwish.ge/?token=".$token->accessToken."&method=google&phone_number=".$phone_verified);
             }
 
         } catch (Exception $exception) {
